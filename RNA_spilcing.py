@@ -41,5 +41,6 @@ s=''
 for i in range(0,x,3):
     s+=dic[dna[i:i+3]]
 print(s)
+"""learnig git"""
 
 
