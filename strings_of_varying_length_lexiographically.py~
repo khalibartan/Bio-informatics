@@ -1,0 +1,25 @@
+# your code goes here
+string=raw_input()
+string=string.replace(' ','')
+n=int(raw_input())
+s=''
+dic={}
+rezults=[]
+for i,key in enumerate(string):
+	i=str(i)
+	dic[i]=key
+	s+=i
+l=[]
+from itertools import product
+for i in range(1,n+1):
+	for x in product(s,repeat=i):
+		w=''.join(x)
+		l.append(w)
+l.sort()
+s=''
+for st in l:
+	for ch in st:
+		s+=dic[ch]
+	print s
+	s=''
+	
